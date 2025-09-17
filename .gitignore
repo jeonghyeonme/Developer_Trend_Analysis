@@ -1,0 +1,13 @@
+# Project planning documents
+PROJECT_PLAN.md
+
+# Python virtual environment
+venv/
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
