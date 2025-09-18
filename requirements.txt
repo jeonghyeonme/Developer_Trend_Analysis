@@ -1,0 +1,8 @@
+# Project Dependencies
+requests
+beautifulsoup4
+pandas
+numpy
+matplotlib
+seaborn
+pymongo
