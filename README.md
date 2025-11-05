@@ -2,9 +2,7 @@
 
 ## 1. 프로젝트 개요
 
-이 프로젝트는 **사람인(Saramin)** 웹사이트에서 신입 개발자 채용 공고 데이터를 직접 크롤링하여 수집하고 분석합니다. 이를 통해 현재 채용 시장에서 요구하는 주요 기술 스택과 역량 트렌드를 파악하는 것을 목표로 합니다.
-
-크롤링을 통해 수집된 데이터를 정제하고 분석하여 신입 개발자 구직자에게 유용한 인사이트를 제공하고자 합니다.
+이 프로젝트는 **사람인(Saramin)** 웹사이트에서 신입 개발자 채용 공고 데이터를 직접 크롤링하여 수집하고 분석합니다. 이를 통해 현재 채용 시장에서 요구하는 주요 기술 스택과 역량 트렌드를 파악하고, 신입 개발자 구직자에게 유용한 인사이트를 제공하는 것을 목표로 합니다.
 
 ## 2. 주요 기능 및 분석 내용
 
@@ -26,6 +24,7 @@
   - `requests`
   - `BeautifulSoup`
   - `Selenium`
+  - `webdriver-manager`
 - **데이터 처리 및 분석 (Analysis):**
   - `Pandas`
   - `NumPy`
@@ -33,7 +32,7 @@
   - `Matplotlib`
   - `Seaborn`
 - **데이터베이스 (Database):**
-  - `MongoDB`
+  - `MongoDB` (계획)
 
 ## 4. 설치 및 실행 방법
 
@@ -54,29 +53,37 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**4. 데이터 수집 실행:**
-```bash
-python src/crawler.py
-```
+**4. 프로젝트 실행 순서:**
 
-**5. 데이터 분석 실행:**
-```bash
-jupyter notebook notebooks/analysis.ipynb
-```
+   **a. 데이터 수집 실행:**
+   ```bash
+   # src/crawler.py 상단의 MAX_PAGES 값을 조절하여 크롤링할 페이지 수 지정
+   python src/crawler.py
+   ```
 
-## 5. 디렉토리 구조 (예상)
+   **b. (예정) 데이터 전처리 실행:**
+   ```bash
+   python src/preprocessor.py
+   ```
+
+   **c. (예정) 데이터 분석 실행:**
+   ```bash
+   jupyter notebook notebooks/analysis.ipynb
+   ```
+
+## 5. 디렉토리 구조
 
 ```
 Developer-Trend-Analysis/
 ├── src/                  # 소스 코드 디렉토리
-│   ├── crawler.py        # 사람인 크롤러
-│   └── preprocessor.py   # 데이터 전처리기
+│   ├── crawler.py        # 사람인 크롤러 (개발 완료)
+│   └── preprocessor.py   # 데이터 전처리기 (개발 예정)
 ├── data/                 # 수집된 데이터 저장
 │   └── raw_jobs.json
 ├── notebooks/            # 데이터 분석용 Jupyter Notebook
 │   └── analysis.ipynb
 ├── requirements.txt      # 프로젝트 의존성 라이브러리 목록
-└── README.md             # 프로젝트 개요
+├── README.md             # 프로젝트 개요 (현재 문서)
+├── PROJECT_PLAN.md       # 상세 프로젝트 계획 문서
+└── TROUBLESHOOTING.md    # 개발 과정 트러블슈팅 기록
 ```
-
-*이 README는 프로젝트 진행 상황에 따라 업데이트될 예정입니다.*
