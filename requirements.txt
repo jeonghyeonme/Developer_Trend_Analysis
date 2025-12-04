@@ -8,3 +8,4 @@ seaborn
 pymongo
 selenium
 webdriver-manager
+networkx
