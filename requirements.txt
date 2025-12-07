@@ -9,3 +9,5 @@ pymongo
 selenium
 webdriver-manager
 networkx
+folium
+jupyter

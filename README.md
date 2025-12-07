@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
    **a. 데이터 수집 실행:**
    ```bash
-   # src/crawler.py 상단의 MAX_PAGES 값을 조절하여 크롤링할 페이지 수 지정
+   # src/crawler.py 상단의 MAX_PAGES, QUERIES 값을 조절하여 크롤링할 페이지 수 및 검색어 설정
    python src/crawler.py
    ```
 
@@ -59,8 +59,8 @@ pip install -r requirements.txt
 
    **c. 데이터 분석 실행:**
    ```bash
-   # Jupyter 환경에서 notebooks/analysis_final.ipynb 파일을 엽니다.
-   jupyter notebook notebooks/analysis_final.ipynb
+   # Jupyter 환경에서 notebooks/analysis.ipynb 파일을 엽니다.
+   jupyter notebook notebooks/analysis.ipynb
    ```
 
 ## 5. 디렉토리 구조
@@ -74,9 +74,14 @@ Developer-Trend-Analysis/
 │   ├── raw_jobs.json
 │   └── processed_jobs.csv
 ├── notebooks/            # 데이터 분석용 Jupyter Notebook
-│   └── analysis_final.ipynb
+│   └── analysis.ipynb
 ├── requirements.txt      # 프로젝트 의존성 라이브러리 목록
 ├── README.md             # 프로젝트 개요 (현재 문서)
-├── PROJECT_PLAN.md       # 상세 프로젝트 계획 문서
 └── TROUBLESHOOTING.md    # 개발 과정 트러블슈팅 기록
 ```
+
+## 6. 분석 보고서
+
+상세 분석 결과는 아래 보고서 파일에서 확인하실 수 있습니다.
+
+- [신입 개발자 기술 트렌드 분석 보고서.pdf](./reports/신입%20개발자%20기술%20트렌드%20분석%20보고서.pdf)

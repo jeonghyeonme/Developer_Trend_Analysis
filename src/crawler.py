@@ -14,7 +14,7 @@ QUERIES = ["신입 백엔드", "신입 프론트엔드"]
 # 각 검색어당 크롤링할 페이지 수 (이 값을 수정하여 페이지 수 조절)
 MAX_PAGES = 5
 # 결과 저장 파일 경로
-OUTPUT_FILE = "C:/Users/parad/Developer-Trend-Analysis/data/raw_jobs.json"
+OUTPUT_FILE = "data/raw_jobs.json"
 # 사람인 기본 URL
 SARAMIN_BASE_URL = "https://www.saramin.co.kr"
 
